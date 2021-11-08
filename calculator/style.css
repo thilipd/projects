@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+body {
+    background: url('./images/bg-stars.svg');
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: hsl(234, 17%, 12%)
+}
+
+.mountain-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 180vh;
+    z-index: -1;
+}
+
+.container {
+    height: 100vh;
+    padding-top: 150px;
+    width: 800px
+}
+
+.section-head {
+    font-size: 22px;
+    letter-spacing: .3em;
+    color: #fff;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.timer-clock {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: hsl(237, 18%, 59%);
+    letter-spacing: 0.2em;
+    font-size: 14px;
+}
+
+.number-display {
+
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+.display-top,
+.display-bottom {
+    width: 150px;
+    height: 73px;
+    border-radius: 10px;
+}
+
+.display-top {
+    background-color: hsl(235, 22%, 22%);
+
+}
+
+.display-bottom {
+    box-shadow: 0 15px 10px #0c0c0c;
+
+}
+
+.display-bottom,
+.display-middle {
+    background-color: hsl(236, 21%, 26%);
+}
+
+.display-middle {
+    background-color: hsl(236, 21%, 26%);
+    width: 135px;
+    height: 4px;
+    border-radius: 5px;
+}
+
+.num {
+    position: absolute;
+    padding: 15px 0;
+    color: hsl(345, 95%, 68%);
+    font-size: 90px;
+    font-weight: 700;
+
+
+}
+
+.media {
+    margin: 250px 0 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.icon {
+    cursor: pointer;
+
+}
+
+.icon:hover {
+
+    background-color: hsl(345, 95%, 68%);
+}
+
+.pin {
+    padding: 0 50px;
+
+}
+
+.pinterest {
+    border-radius: 50%;
+}
+
+.instagram {
+    border-radius: 10px;
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
