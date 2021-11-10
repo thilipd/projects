@@ -1,0 +1,59 @@
+body {
+    width: 100%;
+}
+
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6 {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container1 {
+    margin: auto;
+    background-color: #fefe;
+
+}
+
+.container2 {
+    background-color: #fcfc;
+}
+
+.container3 {
+    background-color: #fafa;
+}
+
+.container4 {
+    background-color: #a9a9;
+}
+
+.container5 {
+    background-color: #e5e5;
+}
+
+.container6 {
+    background-color: #eed;
+}
+
+.container-box {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+h2:first-child {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
