@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Electrolize', sans-serif;
+}
+
+body {
+    background-color: #000;
+
+}
+
+.container {
+    width: 800px;
+    height: 100%;
+    margin: auto;
+
+}
+
+.header {
+    padding-top: 20px;
+    color: green;
+    background-color: #fff;
+    width: 800px;
+    text-align: center;
+    height: 70px;
+
+}
+
+.msgDisplay {
+    background-color: green;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    align-items: center;
+    padding: 5px;
+}
+
+.btns {
+    display: flex;
+}
+
+button {
+    width: 60px;
+    height: 30px;
+    background-color: red;
+}
+
+.game {
+    border: 1px solid black;
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+    background-color: rgb(8, 8, 240);
+}
+
+#blocks {
+    width: 50px;
+    height: 500px;
+    background-color: green;
+    position: relative;
+    left: 850px;
+
+}
+
+@keyframes b {
+    0% {
+        left: 850px;
+    }
+
+    100% {
+        left: -50px;
+    }
+}
+
+#hole {
+    width: 50px;
+    height: 150px;
+    background-color: rgb(8, 8, 240);
+    position: relative;
+    left: 850px;
+    top: -500px;
+}
+
+@keyframes hole {
+    0% {
+        left: 850px;
+    }
+
+    100% {
+        left: -50px;
+    }
+}
+
+#ball {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    border-radius: 50%;
+}
