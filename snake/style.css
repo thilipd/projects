@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rampart One', cursive;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container {
+    width: 600px;
+    height: auto;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.header_container {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+
+}
+
+.game_options {
+    display: flex;
+    justify-content: space-around;
+    background-color: green;
+    padding: 10px;
+    width: 90vmin;
+}
+
+
+canvas {
+    width: 90vmin;
+    height: 90vmin;
+    background-color: blue;
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+    box-shadow: rgb(68, 68, 106) 20px 10px 50px;
+    margin-bottom: 20px;
+}
+
+.snake {
+    background-color: goldenrod;
+    border: .25px solid #ccc;
+}
+
+.food {
+    background-color: lightblue;
+}
