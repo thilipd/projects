@@ -16,13 +16,19 @@
     background-color: aqua;
 }
 
-.game-container {
+.game-container,
+.home-container {
     min-width: 600px;
     min-height: 600px;
     padding-top: 5%;
     display: grid;
     justify-content: center;
     align-items: center;
+    grid-template: [row start]"box1 box2"
+        [row start]"box3 box4";
+}
+
+.game-container {
     grid-template: [row start]"box1 box2"
         [row start]"box3 box4";
 }
@@ -215,4 +221,8 @@ h2 {
     transform: rotateY(180deg);
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.hidden {
+    display: none;
 }
