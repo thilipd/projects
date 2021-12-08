@@ -1,5 +1,3 @@
-//  elements
-
 "use stric";
 
 window.addEventListener("load", function () {
@@ -9,17 +7,44 @@ window.addEventListener("load", function () {
     const gameContainer = document.querySelector(".game-container");
     const menuButton = document.querySelectorAll("button");
     const homeContainer = document.querySelector(".home-container");
+    const display = document.querySelector('.display');
+    const scoreDisplay = document.querySelector('.score');
+    const movesDisplay = document.querySelector('.moves');
 
     // Variables
 
     let card, gameTile, img;
-    let len, sqrt = 0;
+    let len, sqrt, moves, score = 0;
+    let x = [], y = [];
 
+
+    console.log(scoreDisplay)
     // functions
 
+    // Shuffle the images
     const shuffle = function (array) {
         array.sort(() => Math.random() - 0.5);
     }
+
+    // Filp all tiles;
+
+    const flipTile = function () {
+        console.log(card);
+        card.forEach(function (e) {
+            console.log(e.childNodes[1])
+            e.classList.remove("hidden")
+            e.childNodes[1].style.transform = `rotateY(0deg)`;
+        })
+    }
+
+    // Remove HTML element
+
+    const removeTile = function () {
+        card.forEach(function (e) {
+            e.parentNode.remove(e.parentNode)
+        })
+    }
+
 
     // Game mode
 
@@ -28,20 +53,27 @@ window.addEventListener("load", function () {
 
             gameContainer.classList.remove("hidden");
             homeContainer.classList.add("hidden");
-
+            display.classList.remove("hidden");
 
             if (this.innerText === "Easy") {
                 len = 16;
-                sqrt = 4;
+
+
             }
             else if (this.innerText === "Intermediate") {
-                len = 36; sqrt = 6;
+                len = 36;
             }
             else if (this.innerText === "Hard") {
-                len = 64; sqrt = 8;
+                len = 64;
             }
 
+            sqrt = Math.sqrt(len);
+
             // len = 16;
+            moves = len / 2;
+            scoreDisplay.value = score;
+            movesDisplay.value = moves;
+
 
             let tileArr = new Array(16);
             let tempArr = new Array();
@@ -58,7 +90,7 @@ window.addEventListener("load", function () {
 
             for (let j = len; j > 0; j--) {
 
-                gameContainer.insertAdjacentHTML('afterbegin',
+                gameContainer.insertAdjacentHTML('beforeend',
                     ` <div class="game-tile tile-${j}">
                      <div class="card">
                          <div class="card-inner">
@@ -84,9 +116,10 @@ window.addEventListener("load", function () {
 
                 img = document.createElement("img");
 
-                img.style.width = "100%"
-                img.src = `./ball-${tileArr[j]}.png`
 
+                x[j] = `${tileArr[j]}`.padStart(3, 0);
+                img.style.width = "100%"
+                img.src = `${x[j]}.png`
 
                 let tileImg = gameTile[j].childNodes[1].childNodes[1].childNodes[3];
 
@@ -105,6 +138,10 @@ window.addEventListener("load", function () {
 
 
             card.forEach((cardTile, index, arrCard) => {
+
+
+
+
                 cardTile.addEventListener("click", function () {
 
 
@@ -135,17 +172,23 @@ window.addEventListener("load", function () {
                                 counter = 0;
                                 tileOpenArr = [];
 
+                                moves--;
+                                movesDisplay.value = moves;
+
                                 clearTimeout();
 
                             }, 1000);
 
-
                         }
+
                         else if (imgComp[counter - 1] === imgComp[counter]) {
                             for (let i = 1; i < arr.length; i++) {
 
+                                score += 10;
+                                scoreDisplay.value = score;
                                 arrCard[arr[i]].classList.add("hidden");
 
+                                y[counter] = (this.childNodes[1].style.transform);
                             };
 
                             arr = [];
@@ -157,14 +200,30 @@ window.addEventListener("load", function () {
 
                     }
 
-                })
-            })
 
+                    if (moves < 1) {
+                        alert(`Game over!!! /n ${score}`);
+                        gameContainer.classList.add("hidden");
+                        homeContainer.classList.remove("hidden");
+                        display.classList.add("hidden");
+                        flipTile();
+                        removeTile();
+                    }
+
+                    card.forEach(function (c, i) {
+
+                        console.log(c)
+
+                    })
+
+                })
+
+            })
 
         });
 
     })
 
-
-
 })
+
+

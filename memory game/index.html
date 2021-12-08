@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+
     <script defer src="./app.js"></script>
     <title>Memory Game</title>
 </head>
 
 <body>
     <div class="container">
+
         <div class="home-container">
 
             <div class="flip-box  box1">
@@ -71,9 +73,9 @@
                         <div>
                             <h2> Scores </h2>
                             <ul>
-                                <li class="easy-score">Easy : <span class="score">0</span></li>
-                                <li class="Inter-score">Intermediate : <span class="score">0</span></li>
-                                <li class="hard-score">Hard : <span class="score">0</span></li>
+                                <li class="easy-score">Easy : <span class="score-home">0</span></li>
+                                <li class="Inter-score">Intermediate : <span class="score-home">0</span></li>
+                                <li class="hard-score">Hard : <span class="score-home">0</span></li>
                             </ul>
                         </div>
                     </div>
@@ -81,11 +83,19 @@
             </div>
 
         </div>
+        <div class="display hidden">
+            <ul>
+                <li>Score: <input class="score" type="text" value="0" disabled> </li>
+                <li>Moves <input class="moves" type="text" value="0" disabled> </li>
+            </ul>
+        </div>
         <div class="game-container hidden">
+
 
         </div>
 
     </div>
+
 </body>
 
 </html>
