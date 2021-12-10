@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500&family=Bellefair&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Bellefair', serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./assets/home/background-home-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff
+}
+
+.container {
+    background-color: #5a5959;
+    width: 100%;
+    height: 8%;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+    padding-right: 10px;
+    font-size: 20px;
+    font-family: 'Barlow', sans-serif;
+}
+
+span {
+    font-weight: bold;
+}
