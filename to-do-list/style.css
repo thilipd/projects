@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+body {
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(147, 145, 145);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.container {
+    width: 80vw;
+    margin-top: 50px;
+    font-size: 30px;
+
+}
+
+.input-container {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: #000;
+    padding-top: 20px;
+}
+
+.text-input {
+    padding: 20px 30px 20px 30px;
+    width: 100%;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+.input {
+    width: 70%;
+    height: 40px;
+    padding-left: 30px;
+    font-size: large;
+    border: none;
+    color: rgb(75, 75, 75)
+}
+
+.add {
+    height: 40px;
+    width: 90px;
+    border: none;
+    background-color: rgb(206, 206, 206);
+    color: #000;
+}
+
+.add:hover {
+    color: inherit;
+    opacity: 0.5;
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: inherit;
+    background-color: rgb(255, 255, 255);
+    padding: 40px 0;
+}
+
+ul {
+    width: 77%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(75, 75, 75);
+    display: block;
+    position: relative;
+}
+
+ul li:hover {
+    background-color: #eee;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    padding: 12px 16px;
+    transform: translate(0%, -50%);
+
+}
+
+.tick,
+.close {
+    color: rgb(75, 75, 75);
+}
