@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -16,7 +19,7 @@ body {
 }
 
 .container {
-    border: 1px solid rgb(194, 31, 31);
+
     width: 70%;
     height: 30%;
     display: inherit;
@@ -24,6 +27,8 @@ body {
     align-items: inherit;
     flex-direction: column;
     align-content: space-around;
+    padding: 40px;
+    background-color: rgb(136, 136, 136);
 }
 
 .title {
@@ -43,9 +48,35 @@ body {
     width: 100%;
     height: 40px;
     font-size: x-large;
+    text-align: center;
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 255, 240);
 }
 
 .input_section {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.equal {
+    font-size: xx-large;
+}
+
+.con1_input,
+.con2_input {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+.converter1,
+.converter2 {
+    width: 100%;
+    height: 30px;
+    font-size: large;
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 255, 240);
 }
