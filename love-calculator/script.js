@@ -1,9 +1,6 @@
 'use strict';
 
 
-'use strict';
-
-
 // Elements
 
 const name1 = document.querySelector('.n1');
@@ -18,8 +15,8 @@ let name2Arr = [''];
 let x1, x2, y;
 let count = {};
 
-let prop = [];
 let num = [];
+let nam = [];
 let c = 0;
 let alphaCount = [];
 
@@ -38,50 +35,57 @@ calcBtn.addEventListener('click', function () {
     // name1Arr = [name1.value];
     // name2Arr = [name2.value];
 
-    name1Arr = ['Raja'];
+    name1Arr = ['Rajan'];
     name2Arr = ['Rani'];
 
     x1 = name1Arr[0].split("");
     x2 = name2Arr[0].split("");
 
-    y = [...x1, ...luv, ...x2]
+    y = [...x1, ...luv, ...x2];
+
+    y.forEach((val, i) => y[i] = val.toLowerCase())
 
     y.forEach(val => count[val] ? count[val] += 1 : count[val] = 1);
 
     for (let props in count) {
-        prop[c] = count[props];
-        num[c] = props;
+        num[c] = count[props];
+        nam[c] = props;
         ++c;
     }
 
-    alphaCount = [...prop];
 
-    for (let i = 0; i < alphaCount.length; i++) {
-        for (let j = alphaCount.length - 1; j >= 0; j--) {
 
-            add[c1] = alphaCount[i] + alphaCount[j];
-            alphaCount.shift();
-            alphaCount.pop();
+    alphaCount = [...num]
+    let len = Math.trunc(alphaCount.length / 2);
+    let z = alphaCount.length;
+    console.log(len, z)
 
-            j = alphaCount.length - 1;
-            console.log(alphaCount);
+
+
+    for (let i = 0, j = z - 1; i < z - 1, j >= len; i++, j--) {
+
+        if (i === j) {
+            console.log(alphaCount[i] = alphaCount[i], i, j);
+            ++c1;
         }
-        ++c1;
-        i = 0;
-        console.log(add);
+        else if (i !== j) {
+            console.log(alphaCount[i] = alphaCount[i] + alphaCount[j], i, j);
+            ++c1;
+        }
+
+        if (alphaCount.length !== c1) {
+            for (let k = alphaCount.length - 1; k > c1; k--) {
+                console.log(k);
+            }
+        }
     }
 
 
 
-    console.log(x1, x2, y, count, alphaCount, add)
+
+
+    console.log(y, count, nam, num, alphaCount, len)
 })
-
-
-
-
-
-
-
 
 
 
