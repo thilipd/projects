@@ -8,7 +8,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #f99fc9;
+    background-color: #ce2222;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,7 @@ button {
     border: none;
     border-radius: 20px;
     background-color: #f1f3ff;
-    color: #8abad3;
+    color: #473eeb;
 }
 
 input {
@@ -47,7 +47,7 @@ input {
     border: none;
     text-align: center;
     border-bottom: 1px solid #fff;
-    background-color: #f99fc9;
+    background-color: #ce2222;
     margin-bottom: 40px;
     color: #fff;
     font-size: 30px;

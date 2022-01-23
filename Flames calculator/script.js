@@ -22,9 +22,7 @@ let count = {};
 let num = [];
 let nam = [];
 let c = 0;
-let alphaCount = [];
-let c1 = 0;
-const luv = ['l', 'o', 'v', 'e'];
+
 
 const flames = ['f', 'l', 'a', 'm', 'e', 's']
 
@@ -41,8 +39,6 @@ calcBtn.addEventListener('click', function () {
         name1Arr = [name1.value];
         name2Arr = [name2.value];
 
-
-
         x1 = name1Arr[0].split("");
         x2 = name2Arr[0].split("");
 
@@ -57,14 +53,48 @@ calcBtn.addEventListener('click', function () {
             nam[c] = props;
             ++c;
         }
+        let final = [];
 
+        num.forEach((v, i) => {
+            if (v > 1) {
 
-        console.log(y, nam, num)
+                (v % 2) ? final[i] = 1 : final[i] = 0
 
+            } else {
 
-        // resultDisplay.innerHTML = `${result}%`;
-        // display.classList.remove("hidden");
-        // inputContainer.classList.add("hidden");
+                final[i] = v;
+
+            }
+        })
+
+        let n = final.reduce((a, b) => a + b);
+
+        if (n > flames.length) n = (n % flames.length)
+
+        switch (n - 1) {
+            case 0:
+                result = "Friend"
+                break;
+            case 1:
+                result = "Love"
+                break;
+            case 2:
+                result = "Affection"
+                break;
+            case 3:
+                result = 'Marriage'
+                break;
+            case 4:
+                result = "Enemy"
+                break;
+            case 5:
+                result = "Sister"
+                break;
+        }
+
+        resultDisplay.innerHTML = `${result}`;
+        display.classList.remove("hidden");
+        inputContainer.classList.add("hidden");
 
     }
 });
@@ -72,14 +102,14 @@ calcBtn.addEventListener('click', function () {
 resetBtn.addEventListener('click', function () {
     name1Arr = [''];
     name2Arr = [''];
+
+
     x1, x2, y;
     count = {};
 
     num = [];
     nam = [];
     c = 0;
-    alphaCount = [];
-    c1 = 0;
     result;
     name1.value = "";
     name2.value = "";
