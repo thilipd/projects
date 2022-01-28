@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(191, 191, 191)
+}
+
+body {
+
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-image: url('./weather_background.jpeg');
+
+
+}
+
+.container {
+    background-color: #1f1f1fc1;
+    width: 350px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.display_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.place {
+    height: 50px;
+    font-size: 30px;
+
+}
+
+.temperature {
+    height: 70px;
+    font-size: 50px;
+    padding-left: 20px;
+}
+
+.place,
+.temperature {
+    background-color: #1f1f1fc1;
+    border: none;
+}
+
+.displayBtn {
+    height: 40px;
+    border-radius: 20px;
+    width: fit-content;
+    font-size: 20px;
+    padding: 5px 20px;
+    text-align: center;
+    border: none;
+}
+
+.humidity_bar {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.humidity_bar button {
+    width: 30%;
+    height: 30px;
+    font-size: 16px;
+    background-color: #1f1f1fc1;
+    /* border: none; */
+}
+
+
+
+.sunrise,
+.sunset {
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.sunset {
+    justify-content: flex-end;
+}
+
+.today_forecast {
+    display: flex;
+}
+
+.today_time {
+    width: 20%;
+    border: 1px solid green;
+}
+
+
+ul {
+    list-style: none;
+    height: 300px;
+}
+
+.hidden {
+    display: none;
+}

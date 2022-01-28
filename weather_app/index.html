@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src='./script.js'></script>
+    <link href="./style.css" rel="stylesheet">
+    <title>Weather_App</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="home">
+            <div class="display_container">
+                <input type='text' value="Chennai" class='place ' disabled>
+                <input type='text' value="18&#176;" class='temperature' disabled>
+                <button class="displayBtn">Cloudy</button>
+            </div>
+            <div class="humidity_bar">
+                <button class='humidity '>13%</button>
+                <button class="pressure">0.53 mBar</button>
+                <button class="wind">9km/hr</button>
+
+            </div>
+            <div class='sun_bar'>
+                <div class="sunrise">07.00</div>
+                <div class="sunset">06.00</div>
+            </div>
+            <div class='today_forecast'>
+                <div class="today_next_1hr_1 today_time">
+                    <div class="time_1">10 AM</div>
+                    <div class="temp_1"> 19&#176</div>
+
+                </div>
+                <div class="today_next_1hr_2 today_time">
+                    <div class="time_2">11 AM</div>
+                    <div class="temp_1"> 22&#176</div>
+
+                </div>
+                <div class="today_next_1hr_3 today_time">
+                    <div class="time_3">12 PM</div>
+                    <div class="temp_1"> 21&#176</div>
+
+                </div>
+                <div class="today_next_1hr_4 today_time">
+                    <div class="time_4">01 PM</div>
+                    <div class="temp_1"> 18&#176</div>
+
+                </div>
+                <div class="today_next_1hr_5 today_time">
+                    <div class="time_4">02 PM</div>
+                    <div class="temp_1"> 17&#176</div>
+
+                </div>
+
+            </div>
+            <div class="weeks_forecast">
+
+            </div>
+            <nav class="nav">
+                <ul class="list">
+                    <li class="nav_item item_1">Home</li>
+                    <li class="nav_item item_2">fav</li>
+                    <li class="nav_item item_3"></li>
+                    <li class="nav_item item_4">menu</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="fav hidden">
+            <div class="search_bar">
+                <input class='search' placeholder="search">
+            </div>
+            <div class="fav_place hidden"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
