@@ -18,64 +18,124 @@
                 <input type='text' value="Chennai" class='place ' disabled>
                 <input type='text' value="18&#176;" class='temperature' disabled>
                 <button class="displayBtn">Cloudy</button>
+                <!-- <div class="displayImage">
+                    <img src="./images/cloud1.png" alt="cloud" class="imageDisplay">
+                </div> -->
             </div>
             <div class="humidity_bar">
-                <button class='humidity '>13%</button>
-                <button class="pressure">0.53 mBar</button>
-                <button class="wind">9km/hr</button>
-
+                <div class="humButton">
+                    <img src="./images/hygrometer.png" alt="Humidity" class="humImage">
+                    <button class='humidity '>13%</button>
+                </div>
+                <div class="preButton">
+                    <img src="./images/atmospheric-pressure.png" alt="Pressure" class="preImage">
+                    <button class="pressure">0.53 mBar</button>
+                </div>
+                <div class="windButton">
+                    <img src="./images/wind.png" alt="wind" class="windimage">
+                    <button class="wind">9km/hr</button>
+                </div>
             </div>
             <div class='sun_bar'>
-                <div class="sunrise">07.00</div>
-                <div class="sunset">06.00</div>
+                <div class="sunrise">
+                    <span>07.00</span>
+                    <img src="./images/sunrise.png" alt="sunrise" class="sunriseImage">
+                </div>
+                <div class="sunset">
+                    <img src="./images/sunset.png" alt="sunset" class="sunsetImage">
+                    <span>06:00</span>
+
+                </div>
             </div>
+            <h3>Today</h3>
             <div class='today_forecast'>
+
                 <div class="today_next_1hr_1 today_time">
                     <div class="time_1">10 AM</div>
+                    <div class="img_1 t_img">
+                        <img src="./images/cloud.png">
+                    </div>
                     <div class="temp_1"> 19&#176</div>
 
                 </div>
                 <div class="today_next_1hr_2 today_time">
                     <div class="time_2">11 AM</div>
-                    <div class="temp_1"> 22&#176</div>
+                    <div class="img_1 t_img">
+                        <img src="https://img.icons8.com/color/48/000000/partly-cloudy-day--v1.png" />
+                    </div>
+                    <div class="temp_2"> 22&#176</div>
 
                 </div>
                 <div class="today_next_1hr_3 today_time">
                     <div class="time_3">12 PM</div>
-                    <div class="temp_1"> 21&#176</div>
+                    <div class="img_1 t_img">
+                        <img src="https://img.icons8.com/color/48/000000/partly-cloudy-rain--v1.png" />
+                    </div>
+                    <div class="temp_3"> 21&#176</div>
 
                 </div>
                 <div class="today_next_1hr_4 today_time">
                     <div class="time_4">01 PM</div>
-                    <div class="temp_1"> 18&#176</div>
+                    <div class="img_1 t_img">
+                        <img src="https://img.icons8.com/color/48/000000/fog-night--v1.png" />
+                    </div>
+                    <div class="temp_4"> 18&#176</div>
 
                 </div>
                 <div class="today_next_1hr_5 today_time">
-                    <div class="time_4">02 PM</div>
-                    <div class="temp_1"> 17&#176</div>
+                    <div class="time_5">02 PM</div>
+                    <div class="img_1 t_img">
+                        <img src="https://img.icons8.com/color/48/000000/rain--v1.png" />
+                    </div>
+                    <div class="temp_5"> 17&#176</div>
 
                 </div>
 
             </div>
             <div class="weeks_forecast">
+                <h3>Forecast</h3>
+                <div class="day_2 day">
+                    <div class="week">Friday</div>
+                    <div class="img_1 t_img">
+                        <img src="./images/cloud.png">
+                    </div>
+                    <div class="temp_1"> 19&#176</div>
 
+                </div>
+                <div class="day_2 day">
+                    <div class="week">Saturday</div>
+                    <div class="img_1 t_img">
+                        <img src="https://img.icons8.com/color/48/000000/partly-cloudy-day--v1.png" />
+                    </div>
+                    <div class="temp_2"> 22&#176</div>
+
+                </div>
+                <div class="day_2 day">
+                    <div class="week">12 PM</div>
+                    <div class="img_1 t_img">
+                        <img src="https://img.icons8.com/color/48/000000/partly-cloudy-rain--v1.png" />
+                    </div>
+                    <div class="temp_3"> 21&#176</div>
+
+
+                </div>
+                <div class="fav hidden">
+                    <div class="search_bar">
+                        <input class='search' placeholder="search">
+                    </div>
+                    <div class="fav_place hidden"></div>
+                </div>
+                <nav class="nav">
+                    <ul class="list">
+                        <li class="nav_item item_1">Home</li>
+                        <li class="nav_item item_2">fav</li>
+                        <li class="nav_item item_3">theme</li>
+                        <li class="nav_item item_4">menu</li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="nav">
-                <ul class="list">
-                    <li class="nav_item item_1">Home</li>
-                    <li class="nav_item item_2">fav</li>
-                    <li class="nav_item item_3"></li>
-                    <li class="nav_item item_4">menu</li>
-                </ul>
-            </nav>
+
         </div>
-        <div class="fav hidden">
-            <div class="search_bar">
-                <input class='search' placeholder="search">
-            </div>
-            <div class="fav_place hidden"></div>
-        </div>
-    </div>
 
 
 </body>
