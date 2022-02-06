@@ -98,11 +98,17 @@ body {
 
 .sunrise,
 .sunset {
-    height: 40px;
+
     font-size: 20px;
     display: flex;
     align-items: center;
     padding: 5px;
+}
+
+.sunrise img,
+.sunset img {
+    height: 20px;
+    width: 20px;
 }
 
 .sunset {
@@ -126,7 +132,7 @@ h3 {
     align-items: center;
 }
 
-.t_img {
+.t_img img {
     width: 40px;
     height: 40px;
     margin: 5px 0;
